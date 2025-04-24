@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retail Analysis Tool</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            max-width: 800px;
+            margin-top: 50px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .upload-box {
+            border: 2px dashed #ccc;
+            padding: 30px;
+            text-align: center;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+        .features {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Retail Customer Analysis Tool</h1>
+            <p class="lead">Upload your retail data for comprehensive customer insights</p>
+        </div>
+        
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+        
+        <div class="upload-box">
+            <form method="post" action="{{ url_for('upload_file') }}" enctype="multipart/form-data">
+                <h5>Upload Your Retail Data File</h5>
+                <p>Please upload your Excel (.xlsx) or CSV file containing retail transaction data</p>
+                <input type="file" name="file" class="form-control mb-3">
+                <button type="submit" class="btn btn-primary">Upload and Analyze</button>
+            </form>
+        </div>
+        
+        <div class="features">
+            <h4>Analysis Features:</h4>
+            <ul class="list-group">
+                <li class="list-group-item">✅ Customer Segmentation using RFM Analysis</li>
+                <li class="list-group-item">✅ Market Basket Analysis to identify product associations</li>
+                <li class="list-group-item">✅ Purchase Prediction Model</li>
+                <li class="list-group-item">✅ Product Recommendation System</li>
+                <li class="list-group-item">✅ Comprehensive data visualizations</li>
+            </ul>
+        </div>
+        
+        <div class="mt-4">
+            <h5>Expected Data Format:</h5>
+            <p>Your data should include these columns: InvoiceNo, StockCode, Description, Quantity, InvoiceDate, UnitPrice, CustomerID, Country</p>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
