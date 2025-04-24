@@ -84,12 +84,14 @@ pip install -r requirements.txt
 
 Download the **Online Retail dataset** from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Online+Retail) and place it in the `data/raw/` directory.
 
+But it is alredy there when cloning the repository, so no need to download
+
 ### 5. Create required directories
 
 ```bash
 mkdir -p data/raw data/processed models visualizations
 ```
-
+But the folders are alredy there when cloning the repository, so no need to craete them again
 ---
 
 ## 🧪 Usage
