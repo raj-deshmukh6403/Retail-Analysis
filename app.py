@@ -26,10 +26,12 @@ app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024  # 50MB max upload
 app.config['PROCESSED_FOLDER'] = os.path.join(BASE_DIR, 'data/processed')
 app.config['VISUALIZATION_FOLDER'] = os.path.join(BASE_DIR, 'visualizations')
 app.config['MODEL_FOLDER'] = os.path.join(BASE_DIR, 'models')
+app.config['ASSETS_FOLDER'] = os.path.join(BASE_DIR, 'assets')
 
 # Ensure required directories exist
 for directory in [app.config['UPLOAD_FOLDER'], app.config['PROCESSED_FOLDER'], 
-                app.config['VISUALIZATION_FOLDER'], app.config['MODEL_FOLDER']]:
+                app.config['VISUALIZATION_FOLDER'], app.config['MODEL_FOLDER'],
+                app.config['ASSETS_FOLDER']]:
     os.makedirs(directory, exist_ok=True)
 
 # Allowed file extensions
@@ -182,6 +184,11 @@ def view_file(folder, filename):
     else:
         flash('File type not supported for preview')
         return redirect(url_for('results'))
+
+@app.route('/assets/<path:filename>')
+def serve_assets(filename):
+    """Serve static assets like screenshots and images"""
+    return send_from_directory(app.config['ASSETS_FOLDER'], filename)
 
 if __name__ == '__main__':
     app.run(debug=True)

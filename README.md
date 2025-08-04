@@ -22,6 +22,7 @@
 - [Web Application](#web-application)
 - [Output Files](#output-files)
 - [Visualizations](#visualizations)
+- [Frontend Screenshots](#frontend-screenshots)
 - [Business Applications](#business-applications)
 - [Contributing](#contributing)
 - [License](#license)
@@ -82,6 +83,17 @@ retail_analysis_project/
 ├── 📄 README.md                    # Project documentation
 ├── 📄 requirements.txt             # Python dependencies
 ├── 📄 .gitignore                   # Git ignore rules
+├── 📄 LICENSE                      # MIT License
+│
+├── 🗂️ assets/                      # Static assets and documentation
+│   └── screenshots/                # Frontend screenshots
+│       ├── homepage.png
+│       ├── upload-interface.png
+│       ├── analysis-progress.png
+│       ├── results-dashboard.png
+│       ├── data-preview.png
+│       ├── visualizations-gallery.png
+│       └── download-results.png
 │
 ├── 🗂️ data/
 │   ├── raw/                        # Raw data files
@@ -316,6 +328,42 @@ The project generates comprehensive visualizations for business insights:
 - **ROC Curves**: Model performance evaluation
 - **Feature Importance**: Most influential prediction factors
 - **Confusion Matrices**: Classification accuracy assessment
+
+## 📸 Frontend Screenshots
+
+### Web Application Interface
+
+<div align="center">
+
+#### 🏠 Homepage & Upload Interface
+![Homepage](https://raw.githubusercontent.com/raj-deshmukh6403/Retail-Analysis/main/assets/screenshots/homepage.png)
+*Clean, intuitive homepage with file upload interface*
+
+#### 📤 File Upload & Processing
+![Upload Interface](https://raw.githubusercontent.com/raj-deshmukh6403/Retail-Analysis/main/assets/screenshots/upload-interface.png)
+*Drag-and-drop file upload with real-time validation*
+
+#### ⚡ Analysis in Progress
+![Analysis Progress](https://raw.githubusercontent.com/raj-deshmukh6403/Retail-Analysis/main/assets/screenshots/analysis-progress.png)
+*Live processing with progress indicators*
+
+#### 📊 Results Dashboard
+![Results Dashboard](https://raw.githubusercontent.com/raj-deshmukh6403/Retail-Analysis/main/assets/screenshots/results-dashboard.png)
+*Comprehensive results page with interactive visualizations*
+
+#### 📄 Data Preview
+![Data Preview](https://raw.githubusercontent.com/raj-deshmukh6403/Retail-Analysis/main/assets/screenshots/data-preview.png)
+*In-browser CSV file viewing with formatted tables*
+
+#### 🎨 Visualizations Gallery
+![Visualizations Gallery](https://raw.githubusercontent.com/raj-deshmukh6403/Retail-Analysis/main/assets/screenshots/visualizations-gallery.png)
+*Interactive chart gallery with thumbnail previews*
+
+#### 💾 Download Results
+![Download Results](https://raw.githubusercontent.com/raj-deshmukh6403/Retail-Analysis/main/assets/screenshots/download-results.png)
+*One-click download of all analysis results*
+
+</div>
 
 ## 🏢 Business Applications
 
